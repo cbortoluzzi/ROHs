@@ -59,5 +59,5 @@ SNPcount = (widnow size/number of well-covered sites in a window) * number of we
 
 # Requirements
 Python +3.6
-R +3.0 
+
 
