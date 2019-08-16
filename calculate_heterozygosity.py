@@ -95,6 +95,6 @@ if __name__ == "__main__":
         read_json = json.load(json_file)
         chromosomes_length = chromosome_length(fasta)
         param_samtools = parameters_samtools(chromosomes_length,args.b,read_json)
-        fasta.close()
+        fasta.close(), json_file.close()
 
 
