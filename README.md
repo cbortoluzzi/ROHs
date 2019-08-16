@@ -11,13 +11,29 @@ The script takes three input files:
 1. A file containing the path and name of each individual bam file, one per line (-b option)
 2. A file containing the path and name of each individual vcf file, one per line (-v option)
 3. A Tab delimited file with information on genome-wide coverage for each individual (-c option)
-In order to calculate heterozygosity on high confident variants, it is also necessary to set a minimum depth value to consider a SNP (-m option). In case of whole-genome sequencing data with at least 10x homogenous coverage along the genome, we recommend to set this value to at least 4x. The script will then consider only SNPs with a depth of coverage between 4x and 2*$average genome-wide coverage. 
+In order to calculate heterozygosity on high confident variants, it is also necessary to set a minimum depth value to consider a SNP (-m option). In case of whole-genome sequencing data with at least 10x homogenous coverage along the genome, we recommend to set this value to at least 4x. The script will then consider only SNPs with a depth of coverage between 4x and 2*average genome-wide coverage. 
 
 Step 2: calculate_heterozygosity.py
 The script calculates the level of heterozygosity in non-overlapping consecutive windows along the genome for each individual. To do so, the script takes three input parameters:
 1. A indexed fasta file with information on chromosome and total length (-f option) (i.e. this indexed fasta file can be generated with samtools faidx using the reference genome in fasta format of your species of interest)
 2. The json file of your individual for which you want to calculate binned heterozygosity (-j option)
 3. The window size in base pairs (-b option)
+We recommend to use a window size of 10 kb (i.e. -b 10000) for the calculation of the heterozygosity.
+The output file will look like this: 
+
+Sample  1 0 10000 5908  19
+Sample  1 10000 20000 6889  8
+Sample 1 20000 30000 9748  0
+
+The informations are, in order: 
+1. Sample ID
+2. Chromosome 
+3. Start position of the window
+4. End position of the window
+5. Total number of well-covered sites  (4x-2*average coverage) calculated from the BAM file
+6. Total number of well-covered heterozygous sites (4x-2*average coverage) calculated from the VCF file. 
+
+Step 3: identify_rohs.py
 
 
 
