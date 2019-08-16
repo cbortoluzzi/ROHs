@@ -1,0 +1,4 @@
+Sample1 10.877X
+Sample2 9.8873X
+Sample3 18.837X
+Sample4 11.352X
