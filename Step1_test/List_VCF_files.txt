@@ -1,4 +1,0 @@
-/path/to/individual/vcf/file/Sample1.rg.sort.md.real.recal.g.vcf.gz
-/path/to/individual/vcf/file/Sample2.rg.sort.md.real.recal.g.vcf.gz
-/path/to/individual/vcf/file/Sample3.rg.sort.md.real.recal.g.vcf.gz
-/path/to/individual/vcf/file/Sample4.rg.sort.md.real.recal.g.vcf.gz
