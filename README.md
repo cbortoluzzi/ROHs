@@ -21,9 +21,9 @@ The script calculates the level of heterozygosity in non-overlapping consecutive
 We recommend to use a window size of 10 kb (i.e. -b 10000) for the calculation of the heterozygosity.
 The output file will look like this: 
 
-Sample  1 0 10000 5908  19
-Sample  1 10000 20000 6889  8
-Sample 1 20000 30000 9748  0
+Sample  1 0 10000 5908  19 \\
+Sample  1 10000 20000 6889  8 \\
+Sample 1 20000 30000 9748  0 \\
 
 The informations are, in order: 
 1. Sample ID
