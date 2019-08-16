@@ -77,7 +77,9 @@ def write_json(myinput):
 
 if __name__ == "__main__":
         args = parser.parse_args()
-        bam, vcf_input, coverage = open(args.b), open(args.v), open(args.c)
+        bam = open(args.b)
+        vcf_input = open(args.v)
+        coverage = open(args.c)
         make_dict = make_dictionary(bam, vcf_input, coverage, args.m)
         write_json_file = write_json(make_dict)
         bam.close(), vcf_input.close(), coverage.close()
