@@ -18,9 +18,9 @@ from collections import OrderedDict
 
 
 parser = argparse.ArgumentParser(description="Calculate heterozygosity in non-overlapping consecutive windows along the genome")
-parser.add_argument("-f", help="Fasta file with chromosomes and length")
-parser.add_argument("-j",help="Path to the json file")
-parser.add_argument("-b", help="Binsize in base pairs",type=int)
+parser.add_argument("-f", help="Indexed fasta file with chromosomes and total chromosome length")
+parser.add_argument("-j", help="Individual json file")
+parser.add_argument("-b", help="Window size in base pairs (e.g. 10000)",type=int)
 
 
 
