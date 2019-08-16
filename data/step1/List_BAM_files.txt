@@ -1,0 +1,2 @@
+/path/to/individua/bam/file/Sample1.rg.sort.md.real.recal.bam
+/path/to/individua/bam/file/Sample2.rg.sort.md.real.recal.bam
