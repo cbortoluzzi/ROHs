@@ -2,7 +2,7 @@
 The repository contains the scripts required to identify runs of homozygosity (ROHs) using whole-genome sequencing data. The scripts implement the method developed by Bosse et al. (2012). 
 
 # How does it work?
-A region of homozygosity (ROHS) is a contiguous genomic stretch of homozygous genotypes characterized by less variation in an individual than is expected based on the genomic average. These genomic regions are inherited from a common ancestor by both parents (identical haplotypes), and therefore indicate a certain level of relatedness. ROHs are here identified using information on heterozygosity calculated in non-overlapping consecutive windows along the genome. 
+A region of homozygosity (ROH) is a contiguous genomic stretch of homozygous genotypes characterized by less variation in an individual than is expected based on the genomic average. These genomic regions are inherited from a common ancestor by both parents (identical haplotypes), and therefore indicate a certain level of relatedness. ROHs are here identified using information on heterozygosity calculated in non-overlapping consecutive windows along the genome. 
 
 # How do I run it?
 Before identifying ROHs, it is necessary to create the input file (step 1) for calculating heterozygosity (step 2) in non-overlapping windows.
