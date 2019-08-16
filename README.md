@@ -55,6 +55,9 @@ Ideally, the ROH size and ROH length are the same. However, in some cases the le
 The SNP count is the number of heterozygous sites called in a window corrected for the number of sites within that window that did not meet the minimum (4x) and maximum coverage criteria. The corrected number of SNPs is calculated as:
 SNPcount = (widnow size/number of well-covered sites in a window) * number of well-covered heterozygous sites in a window
 
+# Contributing
+We welcome contributions to improve our code, including feature additions, bug fixes and improvements to documentation.
+
 # How do I cite it?
 
 # Requirements
