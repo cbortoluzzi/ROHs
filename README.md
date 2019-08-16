@@ -57,6 +57,7 @@ SNPcount = (widnow size/number of well-covered sites in a window) * number of we
 # How do I cite it?
 If you use this pipeline in your research, please cite the following two papers: 
 Bosse et al. "Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape".  Plos Genetics (2012).
+
 Bortoluzzi et al. "The type of bottleneck matters: insights into the deleterious variation landscape of small managed popualtions". Evolutionary Applications (2019).
 
 # Requirements
