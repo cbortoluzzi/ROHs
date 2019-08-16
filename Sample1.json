@@ -1,0 +1,8 @@
+  "sample": "Sample1",
+  "bam_path": "/path/to/individual/bam/file/Sample1.rg.sort.md.real.recal.bam",
+  "vcf_path": "/path/to/individual/vcf/file/Sample1.rg.sort.md.real.recal.g.vcf.gz",
+  "avg_cov": ,
+  "min_cov": 4,
+  "max_cov": ,
+  "output": "Sample1_input.txt"
+}
