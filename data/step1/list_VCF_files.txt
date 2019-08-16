@@ -1,0 +1,2 @@
+/path/to/individua/vcf/file/Sample1.rg.sort.md.real.recal.vcf.gz
+/path/to/individua/vcf/file/Sample2.rg.sort.md.real.recal.vcf.gz
