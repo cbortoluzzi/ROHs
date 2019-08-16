@@ -6,6 +6,7 @@ A region of homozygosity (ROHS) is a contiguous genomic stretch of homozygous ge
 
 # How do I run it?
 Before identifying ROHs, it is necessary to create the input file (step 1) for calculating heterozygosity (step 2) in non-overlapping windows.
+
 Step 1: make_json.py
 The script takes three input files:
 1. A file containing the path and name of each individual bam file, one per line (-b option)
