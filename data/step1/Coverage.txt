@@ -1,1 +1,2 @@
-
+Sample1 10.877X
+Sample2 9.8873X
