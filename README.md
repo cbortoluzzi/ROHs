@@ -61,6 +61,12 @@ SNPcount = (widnow size/number of well-covered sites in a window) * number of we
 We welcome contributions to improve our code, including feature additions, bug fixes and improvements to documentation.
 
 # How do I cite it?
+If you use our scripts in your research, please cite the following papers:
+
+Bortoluzzi et al. "The type of bottleneck matters: insights into the deleterious variation landscape of small managed populations". Evolutionary Applications (2019)
+
+Bosse et al. "Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape". Plos Genetics (2012)
+
 
 # Requirements
 Python +3.6
