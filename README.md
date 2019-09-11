@@ -13,7 +13,7 @@ The script takes three input files:
 2. A file containing the path and name of each individual vcf file, one per line (-v option)
 3. A Tab delimited file with information on genome-wide coverage for each individual (-c option)
 
-In order to calculate heterozygosity on high confident variants, it is also necessary to set a minimum depth value to consider a SNP (-m option). In case of whole-genome sequencing data with at least 10x homogenous coverage along the genome, we recommend to set this value to at least 4x. The script will then consider only SNPs with a depth of coverage between 4x and 2*average genome-wide coverage. 
+In order to calculate heterozygosity on high confident variants, it is also necessary to set a minimum depth value to consider a SNP (-m option). In case of whole-genome sequencing data with at least 10x homogenous coverage along the genome, we recommend to set this value to at least 4x. The script will then consider only SNPs with a depth of coverage between 4x and 2*average genome-wide coverage. We also recommend to provide a VCF file with only SNPs information (INDELS excluded).
 
 Step 2: calculate_heterozygosity.py
 The script calculates the level of heterozygosity in non-overlapping consecutive windows along the genome for each individual. To do so, the script takes three input parameters:
