@@ -63,10 +63,9 @@ We welcome contributions to improve our code, including feature additions, bug f
 # How do I cite it?
 If you use our scripts in your research, please cite the following papers:
 
-Bortoluzzi et al. "The type of bottleneck matters: insights into the deleterious variation landscape of small managed populations". Evolutionary Applications (2019)
+Bortoluzzi et al. (2020). The type of bottleneck matters: Insights into the deleterious variation landscape of small managed populations. Evolutionary applications, 13(2), 330-341.
 
-Bosse et al. "Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape". Plos Genetics (2012)
-
+Bosse et al. (2012). Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape. PLoS genetics, 8(11).
 
 # Requirements
 Python +3.6
