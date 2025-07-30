@@ -117,7 +117,7 @@ Parameters:
     --o      This is the name of the output directory where the filtered VCF file will be saved.
 ```
 
-To run this script, make sure to have samtools installed and loaded (if a module). 
+To run this script, make sure to have samtools installed and loaded if you installed it as a module. 
 
 **IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 52. For example, if you want a maximum read depth of 2.5 x the average genome-wide coverage, change line 52 with ```max_depth = 2.5 * float(avg_genome_coverage)```. 
 
@@ -140,6 +140,8 @@ where the entries are, in order:
 The heterozygosity is "corrected" because it adjusts for the number of sites excluded from the 10 Kb window due to failing our coverage criteria. Therefore, if a 10 Kb window has 8765 well-covered sites and 10 well-covered heterozygous sites, the corrected heterozygosity is calculated as:
 
 ```corrected_heterozygosity = (window size / cov_sites) * heterozygous_sites = (10000 / 8765) * 10 = 11.41```
+
+**IMPORTANT**: since the VCF file used in this step is the one generated in step 3, it is recommended to apply the same coverage filtering criteria here to maintain consistency. 
 
 ## Help
 
