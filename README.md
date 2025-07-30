@@ -3,9 +3,9 @@
 This README describes the steps that need to be taken to run the runs of homozygosity pipeline as presented in Bortoluzzi et al. (2020).
 
 If you are using any of these scripts, please cite the following papers:
-* Bortoluzzi, C., Bosse, M., Derks, M. F., Crooijmans, R. P., Groenen, M. A., & Megens, H. J. (2020). The type of bottleneck matters: Insights into the deleterious variation landscape of small managed populations. Evolutionary applications, 13(2), 330-341.
-* Bosse et al. (2012). Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape. PLoS genetics, 8(11).
-
+* Bortoluzzi, C., Bosse, M., Derks, M.F., Crooijmans, R.P., Groenen, M.A. and Megens, H.J., 2020. The type of bottleneck matters: Insights into the deleterious variation landscape of small managed populations. Evolutionary applications, 13(2), pp.330-341.
+* Bosse, M., Megens, H.J., Madsen, O., Paudel, Y., Frantz, L.A., Schook, L.B., Crooijmans, R.P. and Groenen, M.A., 2012. Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape. PLoS genetics, 8(11), p.e1003100.
+  
 ## Description
 
 This pipeline consists of various Bash and Python scripts, each described in the order they should be executed.
