@@ -120,8 +120,9 @@ Parameters:
 The output file is going to look like the example below: 
 
 ```
-1  0      10000  8765  10
-1  10000  20000  7865  16
+1  0      10000  8765  10  11.41
+1  10000  20000  7865  16  20.34
+1  20000  30000  6536  2   3.06
 ```
 
 where the entries are, in order:
