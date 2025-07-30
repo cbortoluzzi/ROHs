@@ -95,7 +95,7 @@ This script filters variants in the VCF file based on three key parameters: mini
 
 I recommend reviewing the XML report generated in Step 1 to assess the quality of your data. This report can help you decide if any parameters need adjusting. For example, a default genotype quality of 20 may be too low or too high for your specific dataset, and tweaking it could improve your variant filtering.
 
-**IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. For example, if you have to have a maximum read depth of 2.5 x the average genome-wide coverage, replace line 33 with ```max_depth = 2 * float(avg_genome_coverage)```. 
+**IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. For example, if you want a maximum read depth of 2.5 x the average genome-wide coverage, replace line 33 with ```max_depth = 2 * float(avg_genome_coverage)```. 
 
 ## Help
 
