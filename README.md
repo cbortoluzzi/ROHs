@@ -97,13 +97,9 @@ I recommend reviewing the XML report generated in Step 1 to assess the quality o
 
 **IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. 
 
-
 ## Help
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+If you experience issues or need support, either submit a request or contact me at: chiara[dot]bortoluzzi[dot]2[at]gmail[dot]com
 
 ## Authors
 
@@ -115,10 +111,6 @@ Chiara Bortoluzzi, Data Manager, Environmental Bioinformatics Group, SIB Swiss I
     * New release with documentation
 * 0.1
     * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
 
 ## Acknowledgments
 
