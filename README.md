@@ -75,8 +75,8 @@ In this step, you will use a python script to filter variants called in step 1:
 
 
 To run this script, make sure to have the following modules installed in python: 
-- ```PyVCF 0.6.8```: to install it, refer to this page: https://pypi.org/project/PyVCF/
-- ```pathlib 1.0.1```: to install it, refer to this page: https://pypi.org/project/pathlib/
+- PyVCF 0.6.8: to install it, refer to this page: https://pypi.org/project/PyVCF/
+- pathlib 1.0.1: to install it, refer to this page: https://pypi.org/project/pathlib/
 
 This script will filter variants in the VCF file based on a minimum phred-quality score (default: 15), a minimum read depth (default: 6), and minimum genotype quality (default: 20). As these parameters can be changed when running the script (```-q```, ```-dp```, and ```gq``` option), I encourage you to have a look at the XML report generated in step 1 to check the quality of your data. It is possible that, for example, a genotype quality of 20 (default value) is too low or too high for your individual.
 
