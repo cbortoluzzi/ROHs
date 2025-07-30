@@ -51,7 +51,7 @@ In this step, you will use DeepVariant to perform variant calling from sequencin
 **IMPORTANT**: before running the script, make sure to change in the bash script the paths to DeepVariant and the directory where your data is stored.
 
 ### Step 2: Calculate genome-wide coverage
-In this step, you will use Samtools to compute the genome-wide coverage of each individual in your dataset: 
+In this step, you will use Samtools to compute the genome-wide coverage of each individual alignment file in BAM format: 
 
 ```samtools_depth.sh <bam>```
 
