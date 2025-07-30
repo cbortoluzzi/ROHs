@@ -23,8 +23,7 @@ then
 	echo -e "DESCRIPTION: Use DeepVariant to call variants from sequencing reads\n\n"
 	echo -e "INPUT:       <reference_genome>    The reference genome of the species of interest"
 	echo -e "             <bam>                 Aligned sequences in BAM format"
-  echo -e "             <model>               Model that represents the type of data you are analysing (use WGS for Illumina whole-genome sequencing data, 
-                                              PACBIO for PacBio data, ONT_R104 for Oxford Nanopore R10.4.1 chemistry Simplex and Duplex reads)\n"
+  	echo -e "             <model>               Model that represents the type of data you are analysing (use WGS for Illumina whole-genome sequencing data, PACBIO for PacBio data, ONT_R104 for Oxford Nanopore R10.4.1 chemistry Simplex and Duplex reads)\n"
 
 	echo -e "OUTPUT:      <vcf>                 A VCF file with called variants"
 	echo -e "             <html>                A VCF stats report\n"
