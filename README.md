@@ -120,7 +120,8 @@ Parameters:
 The output file is going to look like the example below: 
 
 ```1  0  10000  8765  10
-1  10000  20000  7865  16```
+1  10000  20000  7865  16
+```
 
 where the entries are, in order:
 - chromosome
