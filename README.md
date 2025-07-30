@@ -131,12 +131,12 @@ The output file is going to look like the example below:
 
 where the entries are, in order:
 ```
-- chromosome
-- start position of the window
-- end position of the window
-- total number of sites meeting our coverage criteria as calculated from the BAM file
-- total number of sites meeting our coverage criteria as calculated from the VCF file
-- corrected heterozygosity 
+chromosome
+start position of the window
+end position of the window
+total number of sites meeting our coverage criteria as calculated from the BAM file
+total number of sites meeting our coverage criteria as calculated from the VCF file
+corrected heterozygosity 
 ```
 
 The heterozygosity is "corrected" because it adjusts for the number of sites excluded from the 10 Kb window due to failing our coverage criteria. Therefore, if a 10 Kb window has 8765 well-covered sites and 10 well-covered heterozygous sites, the corrected heterozygosity is calculated as:
