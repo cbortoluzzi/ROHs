@@ -49,6 +49,7 @@ def average_genome_coverage(coverage):
 		for line in f:
 			line = line.split('=')
 			avg_genome_coverage = line[1].replace(' ','')
+			# Set maximum depth as 2 times the average genome coverage
 			max_depth = 2 * float(avg_genome_coverage)
 	return max_depth
 
@@ -73,6 +74,7 @@ def bam_depth(chromosome, start, end, min_depth, max_depth, bam_f, vcf_f, window
 	for line in outcmd:
 		if line:
 			chromosome, position, depth = line.strip().split()
+			# Retain only sites that meet our minimum and maximum depth 
 			if int(depth) >= min_depth and int(depth) <= max_depth:
 				cov_sites += 1
 	heterozygosity(chromosome, start, end, cov_sites, vcf_f, window, filename, path)
@@ -83,11 +85,13 @@ def heterozygosity(chromosome, start, end, cov_sites, vcf_f, window, filename, p
 	vcf_reader = vcf.Reader(filename=vcf_f)
 	nhet = 0
 	for record in vcf_reader.fetch(chromosome, start, end):
+		# Count number of heterozygous sites in a window
 		for call in record.samples:
 			nhet += record.num_het
 	if cov_sites == window + 1:
 		cov_sites = window
 	try:
+		# Calculate corrected heterozygosity
 		SNPcount = round((window / cov_sites) * nhet, 3)
 	except ZeroDivisionError:
 		SNPcount = 0.0
