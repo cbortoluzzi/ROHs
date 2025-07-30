@@ -39,7 +39,7 @@ In this step, you will use DeepVariant to perform variant calling from sequencin
 - Reference genome (```<reference_genome>```): the reference genome must be in uncompressed .fasta fomrat and indexed. Use the following command to index it:
 ```samtools faidx <reference_genome>```. 
 
-- BAM file (```<bam>```): the input alignment must also be indexed:
+- BAM file (```<bam>```): the input alignment of an individual. Like the reference genome, the alignment must also be indexed:
 ```samtools index <bam>```.
 
 - Model type (```<model>```): this specifies the DeepVariant model to use. Use ```WGS``` for Illumina whole-genome sequencing data, ```PACBIO```for PacBio data, or ```ONT_R104``` for Oxford Nanopore R10.4.1 chemistry Simplex and Duplex reads.
@@ -56,7 +56,7 @@ In this step, you will use Samtools to compute the genome-wide coverage of each 
 ```samtools_depth.sh <bam>```
 
 **Required inputs:**
-- BAM file (```<bam>```): the indexed alignment file for the individual whose genome-wide coverage you want to calculate. 
+- BAM file (```<bam>```): the indexed alignment file for the individual for which you want to calculate the genome-wide coverage. 
 
 **Output:**
 - Coverage file: the bash script will produce a coverage file (```.cov```) reporting the genome-wide coverage. You will need this file in step 3 and 4.  
