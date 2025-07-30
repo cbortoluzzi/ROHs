@@ -143,6 +143,8 @@ The heterozygosity is "corrected" because it adjusts for the number of sites exc
 
 **IMPORTANT**: since the VCF file used in this step is the one generated in step 3, it is recommended to apply the same coverage filtering criteria here to maintain consistency. 
 
+### Step 5: Identify runs of homozygosit (RoH)
+
 ## Help
 
 If you experience issues or need support, either submit a request or contact me at: chiara[dot]bortoluzzi[dot]2[at]gmail[dot]com
