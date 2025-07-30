@@ -132,7 +132,7 @@ where the entries are, in order:
 
 The heterozygosity is "corrected" because it adjusts for the number of sites excluded from the 10 Kb window due to failing our coverage criteria. Therefore, if a 10 Kb window has 8765 well-covered sites and 10 well-covered heterozygous sites, the corrected heterozygosity is calculated as:
 
-``` corrected_heterozygosity = (window size / cov_sites_bam ) * heterozygous_sites_vcf = (10000 / 8765) * 10 = 11.41```
+```corrected_heterozygosity = (window size / cov_sites_bam ) * heterozygous_sites_vcf = (10000 / 8765) * 10 = 11.41```
 
 ## Help
 
