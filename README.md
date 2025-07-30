@@ -107,7 +107,7 @@ command to run if program contains helper info
 
 ## Authors
 
-Chiara Bortoluzzi, Data Manager, Environmental Bioinforamtics Group, SIB Swiss Institute Bioinformatics, Switzerland
+Chiara Bortoluzzi, Data Manager, Environmental Bioinformatics Group, SIB Swiss Institute of Bioinformatics, Switzerland
 
 ## Version History
 
