@@ -97,19 +97,7 @@ I recommend reviewing the XML report generated in Step 1 to assess the quality o
 **IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. For example, if you want a maximum read depth of 2.5 x the average genome-wide coverage, change line 33 with ```max_depth = 2.5 * float(avg_genome_coverage)```. 
 
 ### Step 4: Calculate genome-wide heterozygosity using a window approach
-In this step, you will use a python script to calculate a corrected measure of heterozygosity for each individual VCF file, employing a window size approach. The measure is considered "corrected" because it adjusts for the number of sites excluded from the 10Kb window due to failing our coverage criteria. To illustrate this, let's consider the output below:
-
-```1  0  10000  8765  10```, where
-
-- ```1``` is the chromosome.
-- ```0``` is the start position of the first 10 Kb window.
-- ```10000``` is the end position of the first 10 Kb window.
-- ```8765``` is the number of sites in the first 10 Kb window that meet our coverage criteria (minimum depth: 6x; maximum depth: 2 x genome-wide coverage). This number is calculated from the BAM file.
-- ```10``` is the number of heterozygous sites in the first 10 Kb window that meet our coverage criteria. This number is calculated from the VCF file.
-
-
-
-
+In this step, you will use a python script to calculate a corrected measure of heterozygosity for each individual VCF file, employing a window size approach. 
 
 ```
 calculate_genome_wide_heterozygosity.py -h
@@ -129,9 +117,22 @@ Parameters:
     --o      This is the name of the output directory where the filtered VCF file will be saved.
 ```
 
+The output file is going to look like the example below: 
 
+```1  0  10000  8765  10
+1  10000  20000  7865  16```
 
+where the entries are, in order:
+- chromosome
+- start position of the window
+- end position of the window
+- total number of sites meeting our coverage criteria as calculated from the BAM file
+- total number of sites meeting our coverage criteria as calculated from the VCF file
+- corrected heterozygosity 
 
+The heterozygosity is "corrected" because it adjusts for the number of sites excluded from the 10 Kb window due to failing our coverage criteria. Therefore, if a 10 Kb window has 8765 well-covered sites and 10 well-covered heterozygous sites, the corrected heterozygosity is calculated as:
+
+``` corrected_heterozygosity = (window size / cov_sites_bam ) * heterozygous_sites_vcf = (10000 / 8765) * 10 = 11.41```
 
 ## Help
 
