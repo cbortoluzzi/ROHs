@@ -59,7 +59,7 @@ In this step, you will use Samtools to compute the genome-wide coverage of each 
 - BAM file (```<bam>```): the indexed alignment file for the individual for which you want to calculate the genome-wide coverage. 
 
 **Output:**
-- Coverage file: the bash script will produce a coverage file (```.cov```) reporting the genome-wide coverage. You will need this file in step 3 and 4.  
+- Coverage file: a text file (```.cov```) reporting the genome-wide coverage. You will need this file in step 3 and 4.  
 
 ### Step 3: Filter called variants based on phred-quality score, read depth, and genotype quality
 In this step, you will use a python script to filter variants called in step 1: 
