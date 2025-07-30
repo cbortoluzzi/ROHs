@@ -91,7 +91,7 @@ To run this script, make sure to have the following modules installed in python:
 
 This script filters variants in the VCF file based on three key parameters: minimum Phred-quality score, minimum read depth, and minimum genotype quality. The parameters ```-q```, ```-dp```, and ```-gq``` allow you to modify the default values for these thresholds.
 
-**You only need to specify these parameters if you want to change the default settings**. If you are fine with the defaults, you can omit them when running the script.
+**You only need to specify these three parameters if you want to change the default settings**. If you are fine with the defaults, you can omit them when running the script.
 
 I recommend reviewing the XML report generated in Step 1 to assess the quality of your data. This report can help you decide if any parameters need adjusting. For example, a default genotype quality of 20 may be too low or too high for your specific dataset, and tweaking it could improve your variant filtering.
 
