@@ -114,6 +114,4 @@ Chiara Bortoluzzi, Data Manager, Environmental Bioinformatics Group, SIB Swiss I
 
 ## Acknowledgments
 
-This pipeline was inspired by:
-* Bosse et al. (2012). Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape. PLoS genetics, 8(11).
-
+This pipeline was inspired by: Bosse, M., Megens, H.J., Madsen, O., Paudel, Y., Frantz, L.A., Schook, L.B., Crooijmans, R.P. and Groenen, M.A., 2012. Regions of homozygosity in the porcine genome: consequence of demography and the recombination landscape. PLoS genetics, 8(11), p.e1003100.
