@@ -80,7 +80,7 @@ Parameters:
     --gq = This is the minimum genotype quality that a variant must have to be retained (default value: 20).
 
     --o = This is the name of the output directory where the filtered VCF file will be saved.
-
+```
 
 
 To run this script, make sure to have the following modules installed in python: 
