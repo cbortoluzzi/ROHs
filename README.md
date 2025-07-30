@@ -89,7 +89,11 @@ To run this script, make sure to have the following modules installed in python:
 - ```subprocess```
 - ```argparse```
 
-This script will filter variants in the VCF file based on a minimum phred-quality score (default: 15), a minimum read depth (default: 6), and minimum genotype quality (default: 20). As these parameters can be changed when running the script (```-q```, ```-dp```, and ```gq``` option), I encourage you to have a look at the XML report generated in step 1 to check the quality of your data. It is possible that, for example, a genotype quality of 20 (default value) is too low or too high for your individual.
+This script filters variants in the VCF file based on three key parameters: minimum Phred-quality score, minimum read depth, and minimum genotype quality. The parameters ```-q```, ```-dp```, and ```-gq``` allow you to modify the default values for these thresholds.
+
+**You only need to specify these parameters if you want to change the default settings**. If you are fine with the defaults, you can omit them when running the script.
+
+I recommend reviewing the XML report generated in Step 1 to assess the quality of your data. This report can help you decide if any parameters need adjusting. For example, a default genotype quality of 20 may be too low or too high for your specific dataset, and tweaking it could improve your variant filtering.
 
 **Important**: the script fill also filter variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. 
 
