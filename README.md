@@ -59,7 +59,16 @@ Required inputs:
 - BAM file (```<bam>```): the indexed alignment file for the individual whose genome-wide coverage you want to calculate. 
 
 Output:
-- Coverage file: the bash script will produce a coverage file (```.cov```) reporting the genome-wide coverage. You will need this file in step 4, so for now keep it aside. 
+- Coverage file: the bash script will produce a coverage file (```.cov```) reporting the genome-wide coverage. You will need this file in step 3 and 4.  
+
+### Step 3: Filter called variants based on phred-quality score, read depth, and genotype quality
+In this step, you will use a python script to filter variants called in step 1: 
+
+```python filter_variants.py```
+
+This script will filter variants in the VCF file based on a minimum phred-quality score (default: 15), a minimum read depth (default: 6), and minimum genotype quality (default: 20). As these parameters can be changed when running the script (```-q```, ```-dp```, and ```gq``` option), I encourage you to have a look at the XML report generated in step 1 to check the quality of your data. It is possible that, for example, a genotype quality of 20 (default value) is too low or too high for your individual. The scripts fill also filter variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 33. 
+
+
 
 
 ## Help
