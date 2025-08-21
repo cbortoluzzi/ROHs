@@ -17,7 +17,7 @@ export OMP_NUM_THREADS=20
 
 
 
-if [ $# -ne 2 ]
+if [ $# -ne 3 ]
 then
 	echo -e "\nusage: `basename $0` <reference_genome> <bam> <model>\n"
 	echo -e "DESCRIPTION: Use DeepVariant to call variants from sequencing reads\n\n"
