@@ -8,7 +8,7 @@
 #SBATCH --cpus-per-task=20
 #SBATCH --time=10-24:00:00
 #SBATCH --mem-per-cpu=8000
-#SBATCH --job-name=Filter_VCF
+#SBATCH --job-name=Heterozygosity
 #SBATCH --output=output_%J
 #SBATCH --error=error_%J
 
