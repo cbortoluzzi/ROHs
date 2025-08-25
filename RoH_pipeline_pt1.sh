@@ -26,10 +26,16 @@ then
 fi
 
 
+vcf=$1
+bam=$2
+cov=$3
+
+
 # EXAMPLE: run python script using default options for minimum depth and window size
 python3 calculate_genome_wide_heterozygosity.py --vcf $vcf --bam $bam --cov $cov --o genome_wide_heterpzygosity
 
 # EXAMPLE: run python script changing the minimum depth parameter while maintaining the default value for the window size
 python3 calculate_genome_wide_heterozygosity.py --vcf $vcf --bam $bam --cov $cov --dp 10 --o genome_wide_heterpzygosity
+
 
 
