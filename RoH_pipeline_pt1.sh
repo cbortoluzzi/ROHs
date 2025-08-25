@@ -13,24 +13,23 @@
 #SBATCH --error=error_%J
 
 
-if [ $# -ne 2 ]
+if [ $# -ne 3 ]
 then
-	echo -e "\nusage: `basename $0` <VCF> <coverage>\n"
-	echo -e "DESCRIPTION: Filter VCF file obtained from running DeepVariant\n\n"
-	echo -e "INPUT:       <VCF>         The VCF file obtained from DeepVariant"
+	echo -e "\nusage: `basename $0` <VCF> <bam> <cov>\n"
+	echo -e "DESCRIPTION: Calculate a corrected measure of heterozygosity in a 10-Kb window\n\n"
+	echo -e "INPUT:       <VCF>         The filtered VCF file"
+ 	echo -e "			  <bam>			The alignment file in BAM format"
 	echo -e "             <coverage>    The coverage file obtained from samtools depth\n"
 
-	echo -e "OUTPUT:      <filtered_vcf>   A filtered VCF file\n"
+	echo -e "OUTPUT:      <corrected_heterozygosity>   A tab-delimited file with the corrected measure of heterozygosity in a 10-Kb window\n"
 	exit
 fi
 
 
-vcf=$1 
-cov=$2
+# EXAMPLE: run python script using default options for minimum depth and window size
+python3 calculate_genome_wide_heterozygosity.py --vcf $vcf --bam $bam --cov $cov --o genome_wide_heterpzygosity
+
+# EXAMPLE: run python script changing the minimum depth parameter while maintaining the default value for the window size
+python3 calculate_genome_wide_heterozygosity.py --vcf $vcf --bam $bam --cov $cov --dp 10 --o genome_wide_heterpzygosity
 
 
-# EXAMPLE: if running the python script using the default parameters for filtering the VCF file
-python3 filter_variants.py --vcf $vcf --cov $cov --o filtered_vcf
-
-# EXAMPLE: if running the python script using different parameters from the default ones
-python3 filter_variants.py --vcf $vcf --cov $cov --q 20 --dp 8 --gq 30 --o filtered_vcf
