@@ -119,7 +119,8 @@ Parameters:
     --o      This is the name of the output directory where the filtered VCF file will be saved.
 ```
 
-To run this script, make sure to have samtools installed and loaded if you installed it as a module. 
+To run this script in bash, you can refer to the example bash script ```RoH_pipeline_pt1.sh```. Make sure to have samtools installed or loaded if you installed it as a module. 
+
 
 **IMPORTANT**: the script also filters variants if their read depth is above 2 x the average genome-wide coverage. If you want to allow for a higher maximum read depth, you will need to manually change the script at line 52. For example, if you want a maximum read depth of 2.5 x the average genome-wide coverage, change line 52 with ```max_depth = 2.5 * float(avg_genome_coverage)```. 
 
