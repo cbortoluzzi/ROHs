@@ -88,6 +88,8 @@ To run this script, make sure to have the following modules installed in python:
 - ```subprocess```
 - ```argparse```
 
+To run this script in bash, you can refer to the example bash script ```filter_variants.sh```.
+
 This script filters variants in the VCF file based on three key parameters: minimum Phred-quality score, minimum read depth, and minimum genotype quality. The parameters ```-q```, ```-dp```, and ```-gq``` allow you to modify the default values for these thresholds.
 
 **You only need to specify these three parameters if you want to change the default settings**. If you are fine with the defaults, you can omit them when running the script.
