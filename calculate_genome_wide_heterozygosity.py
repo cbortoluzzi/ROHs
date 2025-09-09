@@ -34,11 +34,9 @@ def sequences_bam(bam_f):
 		if line:
 			chromosome, length = line.strip().split()
 			length = int(length)
-			try:
-				# Make sure to retain only autosomes and sex chromosomes. We are not interested in the scaffolds/contigs, so these are here excluded!
-				if str(chromosome) == 'X' or str(chromosome) == 'Y' or isinstance(int(chromosome), int):
+			if chromsome.startswith('CM'):
 					mygenome[chromosome] = length
-			except ValueError:
+			else:
 				continue
 	return mygenome
 
