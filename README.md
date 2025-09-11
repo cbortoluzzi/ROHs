@@ -149,6 +149,33 @@ The heterozygosity is "corrected" because it adjusts for the number of sites exc
 **IMPORTANT**: since the VCF file used in this step is the one generated in step 3, it is recommended to apply the same coverage filtering criteria here to maintain consistency. 
 
 ### Step 5: Identify runs of homozygosit (RoH)
+In this step, you will use a python script to identify runs of homozygosity (RoH), which are here defined as stretches with lower than expected heterozygosity in an individual's genome. 
+
+```
+runs_of_homozygosity.py -h
+
+Parameters:
+
+    --het    This is the tab delimited file obtained from step 4 on the genome-wide heterozygosity calculated using a window approach.
+
+    --w      This is the window size that was used in the previous step (default value: 10,000 bp).
+
+    --t1     This is the first threshold in the pipeline and it's about the number of consecutive bins or windows to consider at a time when selecting candidate RoHs (default value: 10 bins).
+
+    --t2     This is the second threshold in the pipeline and it's about the minimum number of well covered sites within each window to consider when selecting candidate RoHs (default value: 6,000 sites).
+
+    --t3     This is the third threshold in the pipeline and it's about the fraction under which to retain a candidate RoH (default value: 0.25)
+
+    --o      This is the name of the output directory where the RoHs will be saved.
+```
+
+To run this script in bash, you can refer to the example bash script ```RoH_pipeline_pt2.sh```. 
+
+The identification of RoHs is based on the work of Bosse et al. (2012). Briefly, the script will consider 10 ```(--t1)``` consecutive bins at a time and only bins that will have at least 6,000 well-covered sites ```(--t2)``` will be retained and considered.
+The average heterozygosity will then be calculated within this initial 10 consecutive bins. The 10 consecutive bins will then be retained as candidate ROHs only if the heterozygosity within these 10 consecutive bins is below 0.25 ```(--t3)``` the average genome-wide heterozygosity. All 10 consecutive bins that do not meet these
+criteria will contribute to the genome‐wide heterozygosity level outside ROHs. 
+
+It is possible that within the 10 consecutive bins there are bins that show a peak in heterozygosity. These peaks are often symptomatic of local assembly or alignment errors. To avoid including them in the final RoHs, we relax the threshold within candidate homozygous stretches allowing for maximally twice the average heterozygosity in a bin.
 
 ## Help
 
@@ -160,6 +187,8 @@ Chiara Bortoluzzi, Data Manager, Environmental Bioinformatics Group, SIB Swiss I
 
 ## Version History
 
+* 0.3
+    * Upload of the runs of homozygosity script and relative documentation
 * 0.2
     * New release with documentation
 * 0.1
