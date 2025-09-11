@@ -19,3 +19,4 @@ het=$1
 python runs_of_homozygosity.py --het $het --w 10000 --t1 10 --t2 6000 --t3 0.25 --o RoHs
 
 
+
